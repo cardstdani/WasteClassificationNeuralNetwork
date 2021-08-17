@@ -76,7 +76,7 @@ x = tf.keras.layers.Dense(numClasses, activation='softmax')(x)
 
 model = tf.keras.Model(inputs=baseModel.input,outputs=x)"""
 
-#VGG19 MODEL
+#RESNET152 MODEL
 
 baseModel = tf.keras.applications.ResNet152(input_shape=(256, 256,3), weights='imagenet', include_top=False, classes=numClasses)
 for layers in baseModel.layers:
